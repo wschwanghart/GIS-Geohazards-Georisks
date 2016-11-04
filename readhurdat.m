@@ -12,6 +12,10 @@ function S = readhurdat(file,geom)
 %     http://www.nhc.noaa.gov/data/ (see section Best Track Data (HURDAT2))
 %     The mapping structure can be exported as shapefile and used in a GIS
 %     environment. shapewrite requires the Mapping Toolbox.
+%
+%     See the pdf hurdat2-format-atlantic.pdf for a detailed description of
+%     variables available in the database. Note that all units are changed 
+%     from knots to km/h and from miles to km. This is the default.
 %     
 % Input arguments
 %
@@ -23,8 +27,8 @@ function S = readhurdat(file,geom)
 %               'line' creates a line for each track segment. The
 %               resulting structure contains for each segment windspeed,
 %               pressure, date, hour, as well as wind radii maximum extents
-%               for each quadrant. Note that all units are changed from
-%               knots to km/h and from miles to km. This is the default.
+%               for each quadrant. 
+%
 %               
 % Output arguments
 %
